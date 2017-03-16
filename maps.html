@@ -27,7 +27,7 @@
             .type-picker {
                 position: absolute;
                 top: 15px;
-                left: 500px;
+                left: 200px;
             }
         </style>
     </head>
@@ -61,8 +61,8 @@
                         //  * layers[0] is the base layer (eg OpenStreetMap)
                         //  * layers[1] is where all of your data layers go, and they're stored as "sublayers". The first one is numbered 0, the second is 1, etc. In this case we're getting the first sublayer.
                         routelayer = layers[0].getSubLayer(0);
-                    routelayer = layers[1].getSubLayer(2);
-                     routelayer = layers[1].getSubLayer(3);
+                    routelayer = layers[0].getSubLayer(2);
+                     routelayer = layers[0].getSubLayer(3);
                     
                     });
 
