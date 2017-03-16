@@ -60,7 +60,10 @@
                         // Store the data layer for later:
                         //  * layers[0] is the base layer (eg OpenStreetMap)
                         //  * layers[1] is where all of your data layers go, and they're stored as "sublayers". The first one is numbered 0, the second is 1, etc. In this case we're getting the first sublayer.
-                        watsanLayer = layers[1].getSubLayer(0);
+                        pkardous.cats_busroutes = layers[1].getSubLayer(0);
+                     pkardous.bluelineext_centerline,pkardous.lynxblueline_track = layers[3].getSubLayer(0);
+                     pkardous.cats_busroutes = layers[2].getSubLayer(0);
+                    
                     });
 
                 //
