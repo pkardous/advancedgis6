@@ -41,7 +41,7 @@
         </select>
 
         <script>
-            var watsanLayer;
+            var routelayer;
             $(document).ready(function () {
                 //
                 // Initialize map from Carto: create the map and store the data layer for later
@@ -60,9 +60,9 @@
                         // Store the data layer for later:
                         //  * layers[0] is the base layer (eg OpenStreetMap)
                         //  * layers[1] is where all of your data layers go, and they're stored as "sublayers". The first one is numbered 0, the second is 1, etc. In this case we're getting the first sublayer.
-                        pkardous.cats_busroutes = layers[1].getSubLayer(0);
-                     pkardous.bluelineext_centerline,pkardous.lynxblueline_track = layers[3].getSubLayer(0);
-                     pkardous.cats_busroutes = layers[2].getSubLayer(0);
+                        routelayer = layers[1].getSubLayer(0);
+                    routelayer = layers[3].getSubLayer(0);
+                     routelayer = layers[2].getSubLayer(0);
                     
                     });
 
@@ -80,7 +80,7 @@
                         // else, select only features with the watsan field set to the chosen type
                         sql = "SELECT * FROM pkardous.cats_busroutes WHERE pkardous.cats_busroutes = '" + type + "'";
                     }
-                    pkardous.cats_busroutes.setSQL(sql);
+                    routelayer (sql);
                 });
             });
         </script>
