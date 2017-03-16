@@ -60,9 +60,9 @@
                         // Store the data layer for later:
                         //  * layers[0] is the base layer (eg OpenStreetMap)
                         //  * layers[1] is where all of your data layers go, and they're stored as "sublayers". The first one is numbered 0, the second is 1, etc. In this case we're getting the first sublayer.
-                        routelayer = layers[1].getSubLayer(0);
-                    routelayer = layers[3].getSubLayer(0);
-                     routelayer = layers[2].getSubLayer(0);
+                        pkardous.cats_busroutes,pkardous.bluelineext_centerline,pkardous.lynxblueline_track = layers[1].getSubLayer(0);
+                    pkardous.bluelineext_centerline,pkardous.lynxblueline_track = layers[3].getSubLayer(0);
+                     pkardous.cats_busroutes = layers[2].getSubLayer(0);
                     
                     });
 
@@ -74,13 +74,13 @@
                     var sql;
                     if (type === 'all') {
                         // if type is 'all', reset SQL to the original
-                        sql = "SELECT * FROM routelayer";
+                        sql = "SELECT * FROM pkardous.cats_busroutes,pkardous.bluelineext_centerline,pkardous.lynxblueline_track";
                     }
                     else {
                         // else, select only features with the watsan field set to the chosen type
                         sql = "SELECT * FROM pkardous.cats_busroutes WHERE pkardous.cats_busroutes = '" + type + "'";
                     }
-                    routelayer (sql);
+                    pkardous.cats_busroutes,pkardous.bluelineext_centerline,pkardous.lynxblueline_track (sql);
                 });
             });
         </script>
