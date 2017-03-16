@@ -41,7 +41,7 @@
         </select>
 
         <script>
-            var pkardous.cats_busroutes;
+            var routelayer;
             $(document).ready(function () {
                 //
                 // Initialize map from Carto: create the map and store the data layer for later
@@ -80,7 +80,7 @@
                         // else, select only features with the watsan field set to the chosen type
                         sql = "SELECT * FROM pkardous.cats_busroutes WHERE pkardous.cats_busroutes = '" + type + "'";
                     }
-                    pkardous.cats_busroutes (sql);
+                    routelayer (sql);
                 });
             });
         </script>
