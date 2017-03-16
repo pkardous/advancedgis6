@@ -80,7 +80,7 @@
                         // else, select only features with the watsan field set to the chosen type
                         sql = "SELECT * FROM pkardous.cats_busroutes WHERE pkardous.cats_busroutes = '" + type + "'";
                     }
-                    pkardous.cats_busroutes (sql);
+                    routelayer (sql);
                 });
             });
         </script>
