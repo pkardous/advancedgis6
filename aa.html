@@ -76,10 +76,7 @@
                 cartodb.createVis('map', 'https://thenewschool.carto.com/u/pkardous/api/v2/viz/69f94d20-a1d7-11e6-9703-0ef24382571b/viz.json')
                     .done(function (vis, layers) {
                         maplayer = layers[1].getSubLayer(2);
-                    });
-
-                   $('.ALL-checkbox').change(function () {
-          updateSql();
+              
         });
         $('.COUNTY-checkbox').change(function () {
           updateSql();
@@ -105,8 +102,6 @@
         var whereConditions = [];
         // Since there are more checkboxes we use a technique that is a bit different from previous examples. We gather all the parts of the WHERE clause in an array (whereConditions) based on which checkboxes are checked.
         // If you were using this technique you would do the following for each checkbox
-        if ($('.ALL-checkbox').prop('checked')) {
-          whereConditions.push("tb_pubex_7 = 'ALL'");
         }
         if ($('.COUNTY-checkbox').prop('checked')) {
           whereConditions.push("tb_pubex_7 = 'COUNTY'");
